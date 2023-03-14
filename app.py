@@ -11,3 +11,18 @@ with st.sidebar:
                 data=file,
                 file_name="HARSHIT WADHWANI CV .pdf"
             )
+        
+st.title ("Intoduction")
+st.write("Motivated and detail-oriented student with a strong foundation in Python programming and a passion for problem-solving, seeking opportunities to apply my skills and learn new technologies.")
+
+st.title ("Skills ⚒️")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.button('Python')
+    
+with col2:
+    st.button("MySQL")
+
+with col3:
+    st.button("Streamlit")
