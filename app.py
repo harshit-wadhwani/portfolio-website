@@ -32,7 +32,7 @@ with st.sidebar:
                 file_name="static/HARSHIT WADHWANI CV .pdf"
             )
         
-st.title ("Introduction")
+st.title ("Introduction 👨‍🎓")
 st.write("Motivated and detail-oriented student with a strong foundation in Python programming and a passion for problem-solving, seeking opportunities to apply my skills and learn new technologies.")
 
 st.title ("Skills ⚒️")
@@ -130,7 +130,7 @@ jsonex = {'title' : {'media' : {
           }
 
 #education
-st.title('Education')
+st.title('Education 🏫')
 timeline(jsonex, height=500 )
 data = [['10th', 'Not Applicable','CBSE','2018', '78.8%'],
         ['12th', 'Science (PCM)', 'CBSE', '2020', '88%'],
@@ -154,27 +154,45 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
   if st.button('Crash Course on Python - Coursera'):
-    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/ZHMGLQXRRSSG')
-    
+    #webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/ZHMGLQXRRSSG')
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/ZHMGLQXRRSSG')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)   
   if st.button("Introduction to Git and GitHub"):
-    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/PWNWHE3NX2PN')
-    
+    #webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/PWNWHE3NX2PN')
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/PWNWHE3NX2PN')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)     
   
   
 with col2:
   if st.button("Using Python to Interact with the Operating System"):
-    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/CTZFB8SVEQA8')
-    
+    #webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/CTZFB8SVEQA8')
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/CTZFB8SVEQA8')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)     
   if st.button('Clean Data in SQL using MySQL Workbench'):
-    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/NTDLB8L2VLFB')
-    
+    #webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/NTDLB8L2VLFB')
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/NTDLB8L2VLFB')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)     
 with col3:
   if st.button("Troubleshooting and Debugging Techniques"):
-    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/EEBXPHDN2NSL')
-
+    #webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/EEBXPHDN2NSL')
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/EEBXPHDN2NSL')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div) 
   if st.button('Programming for Everybody (Getting Started withPython)'):
-    st.button("https://www.coursera.org/account/accomplishments/certificate/28MEE66PT68D")
-    
+    #webbrowser.open("https://www.coursera.org/account/accomplishments/certificate/28MEE66PT68D")
+    js = "window.open('https://www.coursera.org/account/accomplishments/certificate/28MEE66PT68D')"  # New tab or window
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)     
 
 st.title('Publications')
 st.subheader('A Study on Real Time Video Analysis for Vehicle Traffic Movement')
