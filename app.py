@@ -204,3 +204,12 @@ if st.button('Show Project', key= 56 ):
   html = '<img src onerror="{}">'.format(js)
   div = Div(text=html)
   st.bokeh_chart(div)  
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
