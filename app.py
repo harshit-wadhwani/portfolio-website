@@ -2,17 +2,22 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_timeline import timeline
+import pandas as pd
+import webbrowser
+from bokeh.models.widgets import Div
+from linkopen import open_link
+
 
 with st.sidebar:
-    image = Image.open("G:\\My Data\\personal photos\\forweb.jpg")
+    image = Image.open("static\\forweb.jpg")
     st.image(image, width = 200)
     st.title("Harshit Wadhwani ")
     #components.html('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="harshitwadhwani" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/harshitwadhwani?trk=profile-badge">Harshit Wadhwani</a></div>', height = 310 )
-    with open("HARSHIT WADHWANI CV .pdf", "rb") as file:
+    with open("static\\HARSHIT WADHWANI CV .pdf", "rb") as file:
         btn = st.download_button(
                 label="Download Resume",
                 data=file,
-                file_name="HARSHIT WADHWANI CV .pdf"
+                file_name="static\\HARSHIT WADHWANI CV .pdf"
             )
         
 st.title ("Intoduction")
@@ -112,9 +117,88 @@ jsonex = {'title' : {'media' : {
           ]
           }
 
+#education
 st.title('Education')
 timeline(jsonex, height=500 )
+data = [['10th', 'Not Applicable','CBSE','2018', '78.8%'],
+        ['12th', 'Science (PCM)', 'CBSE', '2020', '88%'],
+        ['Bachelors of Engineering', 'Artificial Intelligence and Machine Learning', 'DSATM (VTU)', '2024', '8.51 CGPA']]
 
+df = pd.DataFrame(data, columns=['Qualification', 'Stream' , 'Institute', 'Year', 'Score'])
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+# Inject CSS with Markdown
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
+st.table(df)
 
-
+#Certification
 st.title("Certifications")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+  if st.button('Crash Course on Python - Coursera'):
+    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/ZHMGLQXRRSSG')
+    
+  if st.button("Introduction to Git and GitHub"):
+    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/PWNWHE3NX2PN')
+    
+  
+  
+with col2:
+  if st.button("Using Python to Interact with the Operating System"):
+    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/CTZFB8SVEQA8')
+    
+  if st.button('Clean Data in SQL using MySQL Workbench'):
+    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/NTDLB8L2VLFB')
+    
+with col3:
+  if st.button("Troubleshooting and Debugging Techniques"):
+    webbrowser.open('https://www.coursera.org/account/accomplishments/certificate/EEBXPHDN2NSL')
+
+  if st.button('Programming for Everybody (Getting Started withPython)'):
+    st.button("https://www.coursera.org/account/accomplishments/certificate/28MEE66PT68D")
+    
+
+st.title('Publications')
+st.subheader('A Study on Real Time Video Analysis for Vehicle Traffic Movement')
+st.write('International Journal of Engineering Research in Computer Science and Engineering (IJERCSE) · Dec 12, 2022')
+st.write('The study explores techniques for detecting, tracking and counting vehicles, and provides insights into challenges and opportunities for improving the accuracy and efficiency of the process. The results have important implications for traffic management and reducing congestion.')
+if st.button("Show Publication"):
+  #webbrowser.open('https://www.technoarete.org/common_abstract/pdf/IJERCSE/v9/i12/Ext_50731.pdf')
+  js = "window.open('https://www.technoarete.org/common_abstract/pdf/IJERCSE/v9/i12/Ext_50731.pdf')"  # New tab or window
+  html = '<img src onerror="{}">'.format(js)
+  div = Div(text=html)
+  st.bokeh_chart(div)
+  # st.bokeh_chart(open_link('https://www.technoarete.org/common_abstract/pdf/IJERCSE/v9/i12/Ext_50731.pdf'))
+
+  
+st.title('Projects')
+st.subheader('Depression analysis using tweets')
+st.write('Developed an application that extracts last 100 tweets of the users by their username on twitter, it then predict the user\'s Depression, it also creates a word cloud of their tweets.')
+if st.button('Show Project', key = 54):
+  js = "window.open('https://github.com/harshit-wadhwani/Depression-analysis-using-tweets')"  # New tab or window
+  html = '<img src onerror="{}">'.format(js)
+  div = Div(text=html)
+  st.bokeh_chart(div)  
+  
+  
+st.subheader('Online Food Ordering System')
+st.write('A web-based application for restaurant owners to receive orders from customers. Created using Streamlit and MySQL.')
+if st.button('Show Project', key =55):
+  js = "window.open('https://github.com/harshit-wadhwani/Online-food-ordering-system')"  # New tab or window
+  html = '<img src onerror="{}">'.format(js)
+  div = Div(text=html)
+  st.bokeh_chart(div)  
+  
+st.subheader('AI gym trainer')
+st.write('Developed a computer vision system using Mediapipe and OpenCV to accurately track and count bicep curls and correct posture during planks. Provided real-time feedback to users for correct exercise performance and injury prevention.')
+if st.button('Show Project', key= 56 ):
+  js = "window.open('https://github.com/harshit-wadhwani/AI-gym-trainer')"  # New tab or window
+  html = '<img src onerror="{}">'.format(js)
+  div = Div(text=html)
+  st.bokeh_chart(div)  
