@@ -8,6 +8,8 @@ from bokeh.models.widgets import Div
 from linkopen import open_link
 
 
+st.set_page_config(page_title='Harshit Wadhwani', page_icon='🧊', layout="wide",initial_sidebar_state="expanded")
+
 with st.sidebar:
     image = Image.open("static\\forweb.jpg")
     st.image(image, width = 200)
