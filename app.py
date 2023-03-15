@@ -5,7 +5,7 @@ from streamlit_timeline import timeline
 import pandas as pd
 import webbrowser
 from bokeh.models.widgets import Div
-from linkopen import open_link
+
 
 
 st.set_page_config(page_title='Harshit Wadhwani', page_icon='🧊', layout="wide",initial_sidebar_state="expanded")
