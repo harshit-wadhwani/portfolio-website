@@ -1,0 +1,2 @@
+streamlit_timeline
+bokeh==2.4.3
