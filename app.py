@@ -39,7 +39,7 @@ jsonex = {'title' : {'media' : {
     'credit' : ''
          },
          'text' : {
-             'headline' : 'Education',
+             'headline' : '',
              'text' : '<p>Educational Background</p>'
          }},
           'events':[
@@ -114,6 +114,7 @@ jsonex = {'title' : {'media' : {
 
 st.title('Education')
 timeline(jsonex, height=500 )
+
 
 
 st.title("Certifications")
