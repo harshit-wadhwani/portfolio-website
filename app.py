@@ -22,7 +22,7 @@ with st.sidebar:
                 file_name="static/HARSHIT WADHWANI CV .pdf"
             )
         
-st.title ("Intoduction")
+st.title ("Introduction")
 st.write("Motivated and detail-oriented student with a strong foundation in Python programming and a passion for problem-solving, seeking opportunities to apply my skills and learn new technologies.")
 
 st.title ("Skills ⚒️")
