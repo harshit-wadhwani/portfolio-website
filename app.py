@@ -11,15 +11,15 @@ from bokeh.models.widgets import Div
 st.set_page_config(page_title='Harshit Wadhwani', page_icon='🧊', layout="wide",initial_sidebar_state="expanded")
 
 with st.sidebar:
-    image = Image.open("static\\forweb.jpg")
+    image = Image.open("static/forweb.jpg")
     st.image(image, width = 200)
     st.title("Harshit Wadhwani ")
     #components.html('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="harshitwadhwani" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/harshitwadhwani?trk=profile-badge">Harshit Wadhwani</a></div>', height = 310 )
-    with open("static\\HARSHIT WADHWANI CV .pdf", "rb") as file:
+    with open("static/HARSHIT WADHWANI CV .pdf", "rb") as file:
         btn = st.download_button(
                 label="Download Resume",
                 data=file,
-                file_name="static\\HARSHIT WADHWANI CV .pdf"
+                file_name="static/HARSHIT WADHWANI CV .pdf"
             )
         
 st.title ("Intoduction")
