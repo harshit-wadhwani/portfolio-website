@@ -181,7 +181,7 @@ if st.button("Show Publication"):
   
 st.title('Projects')
 st.subheader('Depression analysis using tweets')
-st.write('Developed an application that extracts last 100 tweets of the users by their username on twitter, it then predict the user\'s Depression, it also creates a word cloud of their tweets.')
+st.write('Developed an application that extracts last 100 tweets of the users by their username on twitter. It then predicts the user\'s Depression and it also creates a word cloud of their tweets.')
 if st.button('Show Project', key = 54):
   js = "window.open('https://github.com/harshit-wadhwani/Depression-analysis-using-tweets')"  # New tab or window
   html = '<img src onerror="{}">'.format(js)
@@ -198,7 +198,7 @@ if st.button('Show Project', key =55):
   st.bokeh_chart(div)  
   
 st.subheader('AI gym trainer')
-st.write('Developed a computer vision system using Mediapipe and OpenCV to accurately track and count bicep curls and correct posture during planks. Provided real-time feedback to users for correct exercise performance and injury prevention.')
+st.write('Developed a computer vision system using Mediapipe and OpenCV to accurately track and count bicep curls and correct posture during planks. Provides real-time feedback to users for correct exercise performance and injury prevention.')
 if st.button('Show Project', key= 56 ):
   js = "window.open('https://github.com/harshit-wadhwani/AI-gym-trainer')"  # New tab or window
   html = '<img src onerror="{}">'.format(js)
