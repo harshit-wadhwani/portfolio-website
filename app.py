@@ -14,12 +14,12 @@ with st.sidebar:
     image = Image.open("static/forweb.jpg")
     st.image(image, width = 200)
     st.title("Harshit Wadhwani ")
-    #components.html('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="harshitwadhwani" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/harshitwadhwani?trk=profile-badge">Harshit Wadhwani</a></div>', height = 310 )
-    if st.button("Linkedin 🧑‍💼"):
-      js = "window.open('https://www.linkedin.com/in/harshitwadhwani/')"  # New tab or window
-      html = '<img src onerror="{}">'.format(js)
-      div = Div(text=html)
-      st.bokeh_chart(div)  
+    components.html('<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="harshitwadhwani" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/harshitwadhwani?trk=profile-badge"></a></div>', height = 310 )
+    # if st.button("Linkedin 🧑‍💼"):
+    #   js = "window.open('https://www.linkedin.com/in/harshitwadhwani/')"  # New tab or window
+    #   html = '<img src onerror="{}">'.format(js)
+    #   div = Div(text=html)
+    #   st.bokeh_chart(div)  
     if st.button("Github 👨‍💻"):
       js = "window.open('https://github.com/harshit-wadhwani')"  # New tab or window
       html = '<img src onerror="{}">'.format(js)
