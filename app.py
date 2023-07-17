@@ -6,6 +6,8 @@ import pandas as pd
 import webbrowser
 from bokeh.models.widgets import Div
 
+stri = "HARSHIT"
+
 
 
 st.set_page_config(page_title='Harshit Wadhwani', page_icon='🧊', layout="wide",initial_sidebar_state="expanded")
